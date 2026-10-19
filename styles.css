@@ -1,0 +1,268 @@
+:root {
+  --bg: #faf6f1;
+  --surface: #ffffff;
+  --text: #2e2622;
+  --muted: #6f625a;
+  --accent: #a4553a;
+  --accent-dark: #83412b;
+  --line: #e8ddd3;
+  --radius: 14px;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 "Inter", system-ui, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem max(1.25rem, calc((100% - var(--max)) / 2));
+  background: rgba(250, 246, 241, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+main > section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+}
+
+.hero {
+  padding-top: 7rem !important;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  max-width: 16ch;
+}
+
+.eyebrow,
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--accent-dark);
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(46, 38, 34, 0.08);
+}
+
+.card-image img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body p {
+  color: var(--muted);
+}
+
+.card-body .tag {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.card-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.card-links a {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.card-placeholder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-style: dashed;
+  background: transparent;
+  min-height: 260px;
+}
+
+.about-copy {
+  display: grid;
+  gap: 2rem;
+  max-width: 70ch;
+}
+
+.about-copy p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.contact .actions {
+  justify-content: center;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .site-header nav {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  main > section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .hero {
+    padding-top: 4rem !important;
+  }
+}

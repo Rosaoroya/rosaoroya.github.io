@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Rosa: diseño y desarrollo de páginas web." />
+    <title>Rosa | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio">Rosa</a>
+      <nav aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <p class="eyebrow">Diseño y desarrollo web</p>
+        <h1>Creo páginas web cálidas, claras y fáciles de usar.</h1>
+        <p class="lead">
+          Hola, soy Rosa. Diseño y construyo sitios web a medida para
+          profesionales y pequeños negocios que quieren transmitir confianza.
+        </p>
+        <div class="actions">
+          <a class="button" href="#proyectos">Ver proyectos</a>
+          <a class="link" href="#contacto">Hablemos →</a>
+        </div>
+      </section>
+
+      <section class="section" id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="grid">
+          <article class="card">
+            <a class="card-image" href="https://villaltamrosa-cloud.github.io/EJEMPLO/">
+              <img src="assets/hartxoa.png" alt="Página de inicio de Hartxoa Psicología" />
+            </a>
+            <div class="card-body">
+              <p class="tag">Web corporativa · HTML · CSS · JavaScript</p>
+              <h3>Hartxoa Psicología</h3>
+              <p>
+                Web para un centro de psicología en Bilbao: servicios, filosofía
+                de trabajo, recursos y reserva de citas con Calendly.
+              </p>
+              <div class="card-links">
+                <a href="https://villaltamrosa-cloud.github.io/EJEMPLO/">Ver web</a>
+                <a href="https://github.com/villaltamrosa-cloud/EJEMPLO">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-placeholder">
+            <div class="card-body">
+              <p class="tag">Próximamente</p>
+              <h3>Nuevo proyecto</h3>
+              <p>Aquí aparecerá mi próximo trabajo.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about" id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="about-copy">
+          <p>
+            Me gusta convertir ideas en páginas web sencillas, bonitas y
+            accesibles. Cuido el diseño visual tanto como la experiencia de quien
+            visita la web: textos claros, navegación intuitiva y buena
+            adaptación al móvil.
+          </p>
+          <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Diseño responsive</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes un proyecto en mente? Escríbeme.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/villaltamrosa-cloud">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Rosa</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
