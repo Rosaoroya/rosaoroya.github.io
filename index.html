@@ -3,105 +3,425 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Rosa: diseño y desarrollo de páginas web." />
-    <title>Rosa | Portfolio</title>
+    <title>Rosa Oroya · Eventos, marketing y brand partnerships</title>
+    <meta
+      name="description"
+      content="Periodista que se mueve entre medios y eventos. Marketing, brand partnerships y activaciones de marca en medios de comunicación y festivales de gran formato."
+    />
+    <meta name="theme-color" content="#13201c" />
+
+    <!-- Open Graph: cómo se ve el enlace en WhatsApp, LinkedIn… -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://rosaoroya.com/" />
+    <meta property="og:title" content="Rosa Oroya · Eventos, marketing y brand partnerships" />
+    <meta
+      property="og:description"
+      content="Periodista que se mueve entre medios y eventos. Marketing, brand partnerships y activaciones de marca."
+    />
+    <meta property="og:image" content="https://rosaoroya.com/assets/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- Franja de bienvenida: solo se muestra al entrar desde rosaoroya.com/bime -->
+    <p class="welcome-band" id="welcome-bime" hidden>
+      ¡Encantada de conocerte en BIME! Aquí tienes lo que he hecho y cómo contactarme.
+    </p>
+
+    <!-- ============ MENÚ SUPERIOR ============ -->
     <header class="site-header">
-      <a class="brand" href="#inicio">Rosa</a>
+      <a class="brand" href="#inicio">Rosa Oroya</a>
       <nav aria-label="Navegación principal">
-        <a href="#proyectos">Proyectos</a>
-        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#cartel">Cartel</a>
+        <span aria-hidden="true">·</span>
+        <a href="#historia">Historia</a>
+        <span aria-hidden="true">·</span>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
+      <!-- ============ 1 · PORTADA ============ -->
       <section class="hero" id="inicio">
-        <p class="eyebrow">Diseño y desarrollo web</p>
-        <h1>Creo páginas web cálidas, claras y fáciles de usar.</h1>
-        <p class="lead">
-          Hola, soy Rosa. Diseño y construyo sitios web a medida para
-          profesionales y pequeños negocios que quieren transmitir confianza.
+        <div class="hero-visual">
+          <figure class="hero-photo">
+            <img
+              src="assets/hero.jpg"
+              alt="Rosa Oroya bailando con los brazos abiertos en una pista llena de gente"
+              width="800"
+              height="789"
+              fetchpriority="high"
+            />
+          </figure>
+
+          <!-- Sello circular girado -->
+          <svg class="stamp" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <path id="stamp-circle" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" />
+            </defs>
+            <circle cx="50" cy="50" r="48" class="stamp-ring" />
+            <circle cx="50" cy="50" r="25" class="stamp-ring stamp-ring--inner" />
+            <text class="stamp-text">
+              <textPath href="#stamp-circle" textLength="226">EDICIÓN 2026 · BILBAO · EDICIÓN 2026 · BILBAO ·</textPath>
+            </text>
+            <text x="50" y="57" text-anchor="middle" class="stamp-center">RO</text>
+          </svg>
+
+          <h1 class="hero-title">
+            <span class="line line--left">Me gusta hacer</span>
+            <span class="line line--right">que las cosas</span>
+            <span class="line line--left line--mint">pasen</span>
+          </h1>
+        </div>
+
+        <p class="hero-bio reveal">
+          Periodista que se mueve entre medios y eventos.
+          <em>Marketing, brand partnerships y activaciones de marca</em> en medios de
+          comunicación y festivales de gran formato.
         </p>
-        <div class="actions">
-          <a class="button" href="#proyectos">Ver proyectos</a>
-          <a class="link" href="#contacto">Hablemos →</a>
+
+        <ul class="chips reveal" aria-label="Datos rápidos">
+          <li>Bilbao</li>
+          <li>Abierta a cambiar de ciudad</li>
+          <li>Disponible</li>
+        </ul>
+
+        <div class="actions reveal">
+          <a class="btn btn--ghost" href="#cartel">Ver el cartel ↓</a>
+          <a class="btn btn--primary" href="assets/cv-rosa-oroya.pdf" target="_blank" rel="noopener">
+            Descarga mi CV
+          </a>
         </div>
       </section>
 
-      <section class="section" id="proyectos">
-        <h2>Proyectos</h2>
-        <div class="grid">
-          <article class="card">
-            <a class="card-image" href="https://rosaoroya.github.io/EJEMPLO/">
-              <img src="assets/hartxoa.png" alt="Página de inicio de Hartxoa Psicología" />
-            </a>
-            <div class="card-body">
-              <p class="tag">Web corporativa · HTML · CSS · JavaScript</p>
-              <h3>Hartxoa Psicología</h3>
-              <p>
-                Web para un centro de psicología en Bilbao: servicios, filosofía
-                de trabajo, recursos y reserva de citas con Calendly.
+      <!-- ============ 2 · EL CARTEL ============ -->
+      <section class="band band--dots" id="cartel">
+        <div class="section">
+          <h2 class="section-title"><span>01 — El cartel</span></h2>
+
+          <!-- Cartel de festival.
+               Cada nombre con ficha es un <button data-ficha="ID">:
+               el ID tiene que coincidir con el id de su ficha más abajo. -->
+          <div class="poster reveal">
+            <span class="tape tape--left" aria-hidden="true"></span>
+            <span class="tape tape--right" aria-hidden="true"></span>
+            <p class="sticker" aria-hidden="true">Toca un nombre ↓</p>
+
+            <p class="poster-kicker">Rosa Oroya presenta</p>
+            <h3 class="poster-title">
+              <span>Lo que he</span>
+              <span><span class="accent">hecho</span> hasta hoy</span>
+            </h3>
+            <p class="poster-date">Bilbao · 2019 — 2026</p>
+
+            <div class="stage">
+              <p class="ribbon">Escenario festivales · Last Tour</p>
+              <p class="lineup lineup--big">
+                <button type="button" class="act" data-ficha="ficha-festivales">Bilbao BBK Live</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-festivales">Azkena Rock</button>
               </p>
-              <div class="card-links">
-                <a href="https://rosaoroya.github.io/EJEMPLO/">Ver web</a>
-                <a href="https://github.com/Rosaoroya/EJEMPLO">Código</a>
+              <p class="lineup lineup--small">
+                <button type="button" class="act" data-ficha="ficha-festivales">Pirineos Sur</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-festivales">Big Sound</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-bime">BIME 2026</button>
+              </p>
+            </div>
+
+            <div class="stage">
+              <p class="ribbon">Escenario medios</p>
+              <p class="lineup lineup--big">
+                <button type="button" class="act" data-ficha="ficha-ser">Cadena SER</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-los40">LOS40</button>
+              </p>
+              <p class="lineup lineup--small">
+                <button type="button" class="act" data-ficha="ficha-ecodrive">Bilbao ECOdrive</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-gala">Gala Radio Bilbao</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-eldiario">Reportaje en elDiario.es</button>
+              </p>
+            </div>
+
+            <div class="stage">
+              <p class="ribbon ribbon--mint">Escenario propio</p>
+              <p class="lineup lineup--big">
+                <button type="button" class="act" data-ficha="ficha-musika">Musika Hurbil</button>
+                <span class="sep" aria-hidden="true">•</span>
+                <button type="button" class="act" data-ficha="ficha-swing">Swing Soul Euskadi</button>
+              </p>
+            </div>
+
+            <p class="poster-small">
+              <strong>Organiza:</strong> Rosa Oroya · <strong>Puertas:</strong> abiertas a nuevos proyectos<br />
+              <strong>Gira:</strong> Bilbao y donde haga falta
+            </p>
+          </div>
+
+          <!-- Fichas: se despliegan debajo del cartel al tocar un nombre.
+               Para añadir una foto pendiente, sustituye el <div class="ficha-photo ficha-photo--pending">
+               por: <img class="ficha-photo photo" src="assets/ARCHIVO.jpg" alt="DESCRIPCIÓN" loading="lazy" /> -->
+          <div class="fichas">
+            <article class="ficha" id="ficha-festivales" hidden aria-labelledby="ficha-festivales-title">
+              <header class="ficha-head">
+                <h3 id="ficha-festivales-title" tabindex="-1">Festivales Last Tour</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <img class="ficha-photo photo" src="assets/festival.jpg" alt="Público frente al escenario principal de un festival al atardecer" loading="lazy" width="800" height="470" />
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Last Tour · 2026</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Apoyo a la coordinación de partners estratégicos.</dd></div>
+                  <div><dt>Marcas:</dt><dd>San Miguel, Coca-Cola, Fundación BBK.</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Comunicación con marcas, agencias y proveedores; seguimiento de presupuestos, invitaciones y certificados.</dd></div>
+                  <div><dt>En vídeo:</dt><dd>Activaciones de Azulmarino en Bilbao BBK Live 2026 y el barco de Bereziak. Di soporte a la coordinación y ejecución de estas activaciones desde el equipo de Brand Partnerships de Last Tour.</dd></div>
+                </dl>
+                <a class="ficha-link" href="https://www.youtube.com/watch?v=IAdOa5lOV-0" target="_blank" rel="noopener">→ Ver las activaciones de Azulmarino</a>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="card card-placeholder">
-            <div class="card-body">
-              <p class="tag">Próximamente</p>
-              <h3>Nuevo proyecto</h3>
-              <p>Aquí aparecerá mi próximo trabajo.</p>
-            </div>
-          </article>
+            <article class="ficha" id="ficha-bime" hidden aria-labelledby="ficha-bime-title">
+              <header class="ficha-head">
+                <h3 id="ficha-bime-title" tabindex="-1">BIME 2026</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Last Tour · octubre 2026</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Apoyo al equipo de Brand Partnerships en las activaciones de dos marcas patrocinadoras.</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Recepción de invitados en eventos privados de marca y revisión de prestaciones antes de cada evento.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-ser" hidden aria-labelledby="ficha-ser-title">
+              <header class="ficha-head">
+                <h3 id="ficha-ser-title" tabindex="-1">Cadena SER</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <img class="ficha-photo photo" src="assets/ser.jpg" alt="Programa de la Cadena SER emitiendo en directo desde un set al aire libre" loading="lazy" width="409" height="242" />
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Cadena SER Euskadi · 2023–2026</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Marketing y eventos; después, asesora de publicidad y técnica de marketing.</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Eventos de LOS40, salidas de programa y eventos de networking; propuestas comerciales para instituciones y anunciantes.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-los40" hidden aria-labelledby="ficha-los40-title">
+              <header class="ficha-head">
+                <h3 id="ficha-los40-title" tabindex="-1">LOS40</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Cadena SER Euskadi</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Eventos y conciertos de LOS40, coordinando dirección, redacción, comercial y proveedores.</dd></div>
+                  <!-- Enlace pendiente: cuando lo tengas, añade un <a class="ficha-link"> justo después del </dl> -->
+                </dl>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-ecodrive" hidden aria-labelledby="ficha-ecodrive-title">
+              <header class="ficha-head">
+                <h3 id="ficha-ecodrive-title" tabindex="-1">Bilbao ECOdrive</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <div class="ficha-photo ficha-photo--pending">[PENDIENTE: foto ECOdrive]</div>
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Cadena SER Euskadi</dd></div>
+                  <div><dt>Qué es:</dt><dd>Programación especial de Cadena SER desde Bilbao ECOdrive, el espacio de movilidad sostenible.</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Lo llevé de principio a fin: coordiné el evento desde el área de marketing.</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Coordinación con dirección, redacción, área comercial y proveedores.</dd></div>
+                </dl>
+                <a class="ficha-link" href="https://www.youtube.com/watch?v=OA5zZuC5GUc" target="_blank" rel="noopener">→ Ver el trabajo</a>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-gala" hidden aria-labelledby="ficha-gala-title">
+              <header class="ficha-head">
+                <h3 id="ficha-gala-title" tabindex="-1">Gala Radio Bilbao</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <dl class="ficha-data">
+                  <div><dt>Dónde:</dt><dd>Cadena SER Euskadi · Premios Radio Bilbao a la Excelencia 2024</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Participé en la organización.</dd></div>
+                  <!-- Enlace pendiente: cuando lo tengas, añade un <a class="ficha-link"> justo después del </dl> -->
+                </dl>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-eldiario" hidden aria-labelledby="ficha-eldiario-title">
+              <header class="ficha-head">
+                <h3 id="ficha-eldiario-title" tabindex="-1">Reportaje en elDiario.es</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <dl class="ficha-data">
+                  <div><dt>Qué es:</dt><dd>«Sin patria y sin techo», reportaje publicado en elDiario.es Euskadi (blog Gazteberri), agosto de 2022.</dd></div>
+                  <div><dt>De qué trata:</dt><dd>La situación de las personas migrantes sin hogar en Bilbao, con testimonios de personas que han vivido en la calle y de voluntarios de Ongi Etorri Errefuxiatuak, además de datos de Eustat e Ikuspegi.</dd></div>
+                  <div><dt>Mi papel:</dt><dd>Lo escribí junto a Ana Lee Urrutia Gonzales.</dd></div>
+                </dl>
+                <a class="ficha-link" href="https://www.eldiario.es/euskadi/blogs/gazteberri/patria-techo-613-inmigrantes-llegaron-sueno-viven-calles-bilbao_132_9177821.html" target="_blank" rel="noopener">→ Leer el reportaje</a>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-musika" hidden aria-labelledby="ficha-musika-title">
+              <header class="ficha-head">
+                <h3 id="ficha-musika-title" tabindex="-1">Musika Hurbil</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <dl class="ficha-data">
+                  <div><dt>Qué es:</dt><dd>Revista digital sobre la música emergente en Bilbao. Proyecto para la UPV/EHU (2022–2023), creada con tres compañeros.</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Entrevistas, artículos de opinión y cobertura del BIME.</dd></div>
+                </dl>
+                <a class="ficha-link" href="https://musikahurbil.wixsite.com/musika-hurbil" target="_blank" rel="noopener">→ Ver la revista</a>
+              </div>
+            </article>
+
+            <article class="ficha" id="ficha-swing" hidden aria-labelledby="ficha-swing-title">
+              <header class="ficha-head">
+                <h3 id="ficha-swing-title" tabindex="-1">Swing Soul Euskadi</h3>
+                <button type="button" class="ficha-close"><span aria-hidden="true">✕</span> cerrar</button>
+              </header>
+              <div class="ficha-body">
+                <img class="ficha-photo ficha-photo--capture photo" src="assets/swing.jpg" alt="Captura del reportaje Swing Soul Euskadi: «¡Swing, Clap y Tap! El baile que hace vibrar a Bilbao»" loading="lazy" width="672" height="537" />
+                <dl class="ficha-data">
+                  <div><dt>Qué es:</dt><dd>Reportaje multimedia sobre la escena del swing en Bilbao. Mi TFG (2024).</dd></div>
+                  <div><dt>Qué hice:</dt><dd>Investigación y contacto con profesionales y artistas de la escena local; entrevistas sobre la relación entre música y baile.</dd></div>
+                </dl>
+                <a class="ficha-link" href="https://villaltamrosa.wixsite.com/swing-soul-euskadi" target="_blank" rel="noopener">→ Ver el reportaje</a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section about" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <div class="about-copy">
-          <p>
-            Me gusta convertir ideas en páginas web sencillas, bonitas y
-            accesibles. Cuido el diseño visual tanto como la experiencia de quien
-            visita la web: textos claros, navegación intuitiva y buena
-            adaptación al móvil.
+      <!-- ============ 3 · MI HISTORIA ============ -->
+      <section class="section" id="historia">
+        <h2 class="section-title"><span>02 — ¿Cómo acabé aquí?</span></h2>
+
+        <!-- Línea de tiempo: un <li> por paso -->
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline-num" aria-hidden="true">1</span>
+            <h3>Finanzas y periodismo</h3>
+            <p>Contabilidad primero, periodismo después.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-num" aria-hidden="true">2</span>
+            <h3>Apareció el marketing</h3>
+            <p>Agencia de publicidad: SEM, contenidos.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-num" aria-hidden="true">3</span>
+            <h3>Medios y eventos</h3>
+            <p>Cadena SER y LOS40: conciertos, proveedores, timings.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-num" aria-hidden="true">4</span>
+            <h3>Llegó el barro</h3>
+            <p>Festivales y marcas con Last Tour.</p>
+          </li>
+        </ol>
+
+        <p class="pieces-title reveal">Y cuando juntas las piezas…</p>
+
+        <!-- Tarjetas de habilidades (cuadrícula 2×2) -->
+        <ul class="pieces">
+          <li class="piece reveal">
+            <span class="piece-num" aria-hidden="true">1</span>
+            <h3>Marketing</h3>
+            <p>Estrategia digital&nbsp;· contenidos&nbsp;· Meta Ads&nbsp;· Mailchimp&nbsp;· Canva&nbsp;· Photoshop</p>
+          </li>
+          <li class="piece reveal">
+            <span class="piece-num" aria-hidden="true">2</span>
+            <h3>Ticketing</h3>
+            <p>Eventbrite&nbsp;· SeeTickets&nbsp;· listados&nbsp;· acreditaciones</p>
+          </li>
+          <li class="piece reveal">
+            <span class="piece-num" aria-hidden="true">3</span>
+            <h3>Eventos / directo</h3>
+            <p>Proveedores&nbsp;· timings&nbsp;· hospitality&nbsp;· incidencias</p>
+          </li>
+          <li class="piece reveal">
+            <span class="piece-num" aria-hidden="true">4</span>
+            <h3>Organización</h3>
+            <p>Excel&nbsp;· presupuestos&nbsp;· seguimiento&nbsp;· reporting</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ 4 · CONTACTO ============ -->
+      <section class="section" id="contacto">
+        <h2 class="section-title"><span>03 — Contacto</span></h2>
+
+        <div class="contact-hero">
+          <p class="contact-title" aria-label="¿Hacemos que pasen cosas?">
+            <span aria-hidden="true">¿Hacemos</span>
+            <span aria-hidden="true">que pasen</span>
+            <span class="line--mint" aria-hidden="true">cosas?</span>
           </p>
-          <ul class="skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Diseño responsive</li>
-            <li>GitHub Pages</li>
-          </ul>
+          <img
+            class="contact-photo photo"
+            src="assets/rosa-recorte.png"
+            alt="Rosa Oroya sonriendo, mirando por encima del hombro"
+            width="362"
+            height="660"
+            loading="lazy"
+          />
         </div>
-      </section>
 
-      <section class="section contact" id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Tienes un proyecto en mente? Escríbeme.</p>
-        <div class="actions">
-          <a class="button" href="https://github.com/Rosaoroya">GitHub</a>
+        <!-- Entrada de concierto (decorativa) -->
+        <div class="ticket reveal" aria-hidden="true">
+          <div class="ticket-main">
+            <p class="ticket-name">Rosa Oroya</p>
+            <p class="ticket-sub">Eventos&nbsp;· marketing&nbsp;· patrocinios</p>
+          </div>
+          <div class="ticket-barcode"></div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="assets/cv-rosa-oroya.pdf" target="_blank" rel="noopener">
+            Descarga mi CV
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/rosa-oroya-villalta-37227b189/" target="_blank" rel="noopener">
+            Conectemos en LinkedIn
+          </a>
+          <a class="btn btn--ghost" href="mailto:villaltamrosa@gmail.com">¿Hablamos? · Email</a>
         </div>
       </section>
     </main>
 
+    <!-- ============ PIE ============ -->
     <footer class="site-footer">
-      <p>© <span id="year">2026</span> Rosa</p>
+      <p>Con base en Bilbao · abierta a cambiar de ciudad</p>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="main.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rosa Oroya · Eventos, marketing y brand partnerships</title>
+    <meta
+      name="description"
+      content="¡Encantada de conocerte en BIME! Aquí tienes lo que he hecho y cómo contactarme."
+    />
+    <meta name="theme-color" content="#13201c" />
+    <meta name="robots" content="noindex" />
+
+    <!-- Open Graph: cómo se ve el enlace /bime al compartirlo -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://rosaoroya.com/bime/" />
+    <meta property="og:title" content="Rosa Oroya · Eventos, marketing y brand partnerships" />
+    <meta property="og:description" content="¡Encantada de conocerte en BIME! Aquí tienes lo que he hecho y cómo contactarme." />
+    <meta property="og:image" content="https://rosaoroya.com/assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Esta página no repite el contenido: lleva a la portada
+         con ?desde=bime, que muestra la franja de bienvenida. -->
+    <meta http-equiv="refresh" content="0; url=../?desde=bime" />
+    <script>
+      // En el ordenador (sin servidor) hay que apuntar a index.html
+      var destino = location.protocol === "file:" ? "../index.html?desde=bime" : "../?desde=bime";
+      location.replace(destino);
+    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+    <style>
+      body { margin: 0; background: #13201c; color: #f3ecdf; font: 16px system-ui, sans-serif; text-align: center; padding: 40px 20px; }
+      a { color: #7fd3bc; }
+    </style>
+  </head>
+  <body>
+    <p><a href="../?desde=bime">Ir a la web de Rosa Oroya</a></p>
+  </body>
+</html>
